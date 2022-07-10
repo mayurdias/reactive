@@ -7,15 +7,12 @@ public class Exercise1 {
         // Use StreamSources.intNumbersStream() and StreamSources.userStream()
 
         // Print all numbers in the intNumbersStream stream
-        // TODO: Write code here
         StreamSources.intNumbersStream().forEach(number -> System.out.println(number));
 
         // Print numbers from intNumbersStream that are less than 5
-        // TODO: Write code here
         StreamSources.intNumbersStream().filter(number -> number < 5).forEach(number -> System.out.println(number));
 
         // Print the second and third numbers in intNumbersStream that's greater than 5
-        // TODO: Write code here
         StreamSources.intNumbersStream()
                 .filter(number -> number < 5)
                 .skip(1)
@@ -25,7 +22,6 @@ public class Exercise1 {
 
         //  Print the first number in intNumbersStream that's greater than 5.
         //  If nothing is found, print -1
-        // TODO: Write code here
         int i = StreamSources.intNumbersStream()
                 .filter(number -> number < 5)
                 .findFirst()
@@ -33,13 +29,11 @@ public class Exercise1 {
         System.out.println(i);
 
         // Print first names of all users in userStream
-        // TODO: Write code here
         StreamSources.userStream()
                 .map(user -> user.getFirstName())
                 .forEach(userName -> System.out.println(userName));
 
         // Print first names in userStream for users that have IDs from number stream
-        // TODO: Write code here
         StreamSources.userStream()
                 .map(user -> StreamSources.intNumbersStream()
                         .filter(number -> user.getId() == number))
